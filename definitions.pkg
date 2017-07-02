@@ -1,0 +1,16 @@
+`ifndef DEFS_DONE
+ `define DEFS_DONE
+package definitions;
+
+  typedef enum{ADD,SUB,MUL}opcode_t;
+
+  typedef struct{logic [31:0]a,b;
+			     opcode_t opcode;
+                }instruction_t;
+
+  function automatic [31:0]multiplier(input [31:0]a,b);
+    return a*b;
+  endfunction
+endpackage
+  import definitions :: *;
+`endif
